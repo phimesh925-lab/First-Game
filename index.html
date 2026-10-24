@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+  <meta name="theme-color" content="#080d12" />
+  <title>CITY TRACE: HEATLINE</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div id="game-root"><div id="boot"><div class="boot-mark">CT<span>:</span>H</div><p>INITIALIZING CITY SYSTEMS</p><div class="load-track"><i></i></div><small>WebGL district renderer · build 1.0</small></div></div>
+  <div id="ui" class="hidden">
+    <header class="topbar"><div class="brand">CITY TRACE <span> / HEATLINE</span></div><div class="stats"><span id="heat">HEAT 0</span><span id="cash">₹ 0</span><button id="pauseBtn" aria-label="Pause">Ⅱ</button></div></header>
+    <section class="mission-card"><small id="missionTag">CURRENT OPERATION</small><strong id="missionTitle">Wrong Delivery</strong><p id="objective">Reach the marked drop point.</p><div class="mission-progress"><i id="progressBar"></i></div></section>
+    <div id="toast" class="toast"></div>
+    <div class="bottom-left"><div class="mini-map"><canvas id="map" width="150" height="150"></canvas><span class="map-label">DISTRICT 04</span></div><div class="vitals"><div><span>HEALTH</span><b id="healthText">100</b></div><div class="vital-line"><i id="healthBar"></i></div><div><span>VEHICLE</span><b id="vehicleText">ON FOOT</b></div><div class="vital-line"><i id="vehicleBar"></i></div></div></div>
+    <div id="speed" class="speed hidden"><strong id="speedNum">000</strong><span>KM/H</span><small id="vehicleName">COMPACT</small></div>
+    <div id="interactHint" class="interact-hint">E · INTERACT</div>
+    <div class="controls">
+      <div class="left-controls"><div id="stick" class="stick"><div class="stick-knob"></div></div><button id="sprintBtn" class="control-btn">RUN</button></div>
+      <div class="right-controls"><button id="jumpBtn" class="control-btn">JUMP</button><button id="interactBtn" class="control-btn accent">ACT</button><div id="driveControls" class="drive-controls hidden"><button id="leftBtn" class="control-btn">◀</button><button id="brakeBtn" class="control-btn">BRAKE</button><button id="gasBtn" class="control-btn accent">GAS</button><button id="rightBtn" class="control-btn">▶</button><button id="handbrakeBtn" class="control-btn">HB</button></div></div>
+    </div>
+    <div id="menu" class="overlay hidden"><div class="menu-panel"><div class="eyebrow">CITY TRACE PROJECT</div><h1 id="menuTitle">PAUSED</h1><p id="menuCopy">The city remembers your habits.</p><div id="menuButtons" class="menu-buttons"></div><small class="menu-foot">Autosave enabled · Touch controls supported</small></div></div>
+    <div id="dialogue" class="overlay hidden"><div class="dialogue-panel"><small>FIELD TRANSMISSION</small><h2 id="dialogueTitle"></h2><p id="dialogueText"></p><button id="dialogueContinue" class="primary">CONTINUE</button></div></div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
